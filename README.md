@@ -1,17 +1,14 @@
 # simpleConf
 Simple configuration file reading <br>
-##1.config.conf 描述<br>
-
+## 1.config.conf 描述<br>
 浅蓝色文字：<font color="#0000dd">浅蓝色文字</font><br /> 
-
-
 <b>除非是纯数字,否则一律按字符串处理</b><br>
 `#`表示注释<br>
 `##` 表示第一级 key<br>
 key 值建议首字母小写,`key-value`必须一一对应<br>
 key 值必须与 struct{} 的 `json tag` 一致
 
-##2.使用
+## 2.使用
 ```go
 # server config
 ## server
@@ -28,7 +25,7 @@ pw   = 123456qw
 # image config
 ## image
 ```
-对应着下面这段 json
+### 对应着下面这段 json
 ```json
 
 {
@@ -47,7 +44,7 @@ pw   = 123456qw
     }
 }
 ```
-对应 GoLang struct{} 为
+### 对应 GoLang struct{} 为
 ```go
 // 配置文件结构体
 type Table struct {
